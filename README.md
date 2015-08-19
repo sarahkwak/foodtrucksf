@@ -12,7 +12,7 @@ The original challenge is from Uber's Coding Challenge list: https://github.com/
 4. When the user type their addresses, it will narrow down the search result within the area only.
 5. The list is showing all the foodtrucks in the SF area. It does not sync with the map search result.
 6. The list is paginated by 15 search result in the page
-
+![Alt FoodTruckSF Screenshot](https://github.com/sarahkwak/foodtrucksf/blob/master/app/assets/images/foodtrucksf.png)
 ## Future Wishlist:
 * Each list has link to 'yelp' so user can review their ratings
 * the list will only show the narrowed result once the user put address
@@ -22,4 +22,4 @@ The original challenge is from Uber's Coding Challenge list: https://github.com/
 * User can save favorite truck lists
 * User receive the alert when the favorite food truck tweeted
 
-#### The app is deployed at [The FoodTruck SF}(https://thefoodtrucksf.herokuapp.com).
+#### The app is deployed at [The FoodTruck SF](https://thefoodtrucksf.herokuapp.com).
