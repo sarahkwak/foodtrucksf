@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'foods#index'
-
+  match 'auth/:provider/callback', to: 'sessions#create', via: :get
+  match 'auth/failure', to: redirect('/'), via: :get
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: :get
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

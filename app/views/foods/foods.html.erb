@@ -2,27 +2,24 @@
 <html>
   <head>
     <%= include_gon %>
-    <style type="text/css">
-      html, body { height: 500px; margin: 0; padding: 0; width: 100%;}
-      #map { height: 100%; }
-    </style>
   </head>
   <body>
+    <div id="user_nav">
+      <% if current_user %>
+        Signed in as <strong><%= current_user.name %></strong>!
+        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+      <% else %>
+        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+      <% end %>
+    </div>
+
     <div id="map"></div>
-    <script type="text/javascript">
-
-
-
-    </script>
-
      <div id="panel">
       <input id="address" type="textbox">
       <input id="submit" type="button" value="Search">
     </div>
-    <div id="map"></div>
-
     <% @foods.each do |food| %>
-      <h1><%= food.name %></h1>
+      <h3><%= food.name %></h3>
       <p><%= food.fooditems %></p>
     <% end %>
 
