@@ -5,7 +5,7 @@ The data is available on [DataSF:Food Trucks](https://data.sfgov.org/Economy-and
 
 The original challenge is from Uber's Coding Challenge list: https://github.com/uber/coding-challenge-tools/blob/master/coding_challenge.md
 
-## Outline:
+## Outline
 1. Currently, all food trucks are seeded in the database. The datas are collected and sorted in the seed file.
 2. Set up postgreSQL to import and safe the data from the API
 3. Google map render the all food trucks when the page loaded
@@ -13,7 +13,8 @@ The original challenge is from Uber's Coding Challenge list: https://github.com/
 5. The list is showing all the foodtrucks in the SF area. It does not sync with the map search result.
 6. The list is paginated by 15 search result in the page
 ![Alt FoodTruckSF Screenshot](https://github.com/sarahkwak/foodtrucksf/blob/master/app/assets/images/foodtrucksf.png)
-## Future Wishlist:
+
+## Future Wishlist
 * Each list has link to 'yelp' so user can review their ratings
 * the list will only show the narrowed result once the user put address
 * re-size the map so it doesn't break the flow of the page.
