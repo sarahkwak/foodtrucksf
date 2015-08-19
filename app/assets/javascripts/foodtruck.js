@@ -26,15 +26,15 @@ function initMap() {
     });
     markers.push(marker)
 
-    var infoWindow = new google.maps.InfoWindow({
-        content: foodtruck[i]['name']
-    });
-    infoWindows.push(infoWindow)
+    // infoWindows.push(infoWindow)
 
   google.maps.event.addListener(marker,'click', function() {
-    infoWindow.open(map, this);
     console.log(this)
-    console.log(infoWindows[i].content)
+    var infoWindow = new google.maps.InfoWindow({
+        content: this.title
+    });
+    infoWindow.close();
+    infoWindow.open(map, this);
   });
 
   } //for loop
