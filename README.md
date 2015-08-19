@@ -3,7 +3,7 @@
 
 The data is available on [DataSF:Food Trucks](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat?)
 
-The original challenge is from Uber's Coding Challenge list: https://github.com/uber/coding-challenge-tools/blob/master/coding_challenge.md
+The original capp idea is from Uber's Coding Challenge list: https://github.com/uber/coding-challenge-tools/blob/master/coding_challenge.md
 
 ## Outline
 1. Currently, all food trucks are seeded in the database. The datas are collected and sorted in the seed file.
@@ -15,12 +15,12 @@ The original challenge is from Uber's Coding Challenge list: https://github.com/
 ![Alt FoodTruckSF Screenshot](https://github.com/sarahkwak/foodtrucksf/blob/master/app/assets/images/foodtrucksf.png)
 
 ## Future Wishlist
-* Each list has link to 'yelp' so user can review their ratings
-* the list will only show the narrowed result once the user put address
-* re-size the map so it doesn't break the flow of the page.
-* The InfoWindow on the map has a link to yelp so user can click within the map
-* User can login with yelp and leave a review of the food truck
+* Each list has a link to 'yelp' so user can review the ratings
+* The list will only show the narrowed result once the user put an address
+* Re-size the map so it doesn't break the flow of the page
+* The InfoWindow on the map has a link to 'yelp' so user can click within the map and get the information about the truck
+* User can login with 'yelp' and leave a review and post photos
 * User can save favorite truck lists
-* User receive the alert when the favorite food truck tweeted
+* User receives the alert when the favorite food truck tweeted
 
 #### The app is deployed at [The FoodTruck SF](https://thefoodtrucksf.herokuapp.com).
