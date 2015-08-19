@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= include_gon %>
+    <style type="text/css">
+      html, body { height: 500px; margin: 0; padding: 0; width: 100%;}
+      #map { height: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="text/javascript">
+
+
+
+    </script>
+
+     <div id="panel">
+      <input id="address" type="textbox">
+      <input id="submit" type="button" value="Search">
+    </div>
+    <div id="map"></div>
+
+    <% @foods.each do |food| %>
+      <h1><%= food.name %></h1>
+      <p><%= food.fooditems %></p>
+    <% end %>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACTrStuIQk7xfQkQvdUYTApYyq-4guyw8&callback=initMap">
+    </script>
+  </body>
+</html>
