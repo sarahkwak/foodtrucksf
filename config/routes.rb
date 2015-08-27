@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+# Favorites
+  get '/favorites' => 'favorites#index'
+  post '/foods/:id/favorite' => 'favorites#create'
+  delete '/foods/:id/favorite' => 'favorites#delete'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

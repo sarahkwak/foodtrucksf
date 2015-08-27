@@ -25,12 +25,19 @@
       </div>
     </div>
 
-    <div id="map"></div>
+    <!-- <div id="map"></div> -->
 
     <div class=food-truck>
       <h1>The List of All Food Trucks in SF</h1>
       <% @foods_page.each do |food| %>
         <h3><%= food.name %></h3>
+        <% if current_user %>
+          <% if Favorite.where(food_id: food.id, user_id: current_user.id).count > 0 %>
+            <%= button_to 'Unfavorite', "/foods/#{food.id}/favorite", :method => :delete %>
+          <% else %>
+            <%= button_to 'Favorite', "/foods/#{food.id}/favorite" %>
+          <% end %>
+        <% end %>
         <p><%= food.fooditems%><p>
       <%end%>
       <div class=pagination>
