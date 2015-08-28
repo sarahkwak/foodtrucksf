@@ -3,9 +3,12 @@ var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat:  37.775, lng: -122.419},
-    zoom: 13,
-    scrollwheel: false
+    zoom: 13
+    // scrollwheel: false
   });
+   google.maps.event.addListener(map, 'mouseout', function(event){
+     this.setOptions({scrollwheel:false});
+    });
 
   var markers = []
   var infoWindows = []
