@@ -3,9 +3,9 @@ var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat:  37.775, lng: -122.419},
-    zoom: 13
+    zoom: 13,
+    scrollwheel: false
   });
-
 
   var markers = []
   var infoWindows = []
