@@ -52,6 +52,10 @@ body {
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
+
+input#address:focus {
+  color: black;
+}
 #panel h1 {
   padding-top: 15px;
   color: #006B6B;
