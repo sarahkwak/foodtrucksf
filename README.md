@@ -23,4 +23,4 @@ The original capp idea is from Uber's Coding Challenge list: https://github.com/
 * User can save favorite truck lists
 * User receives the alert when the favorite food truck tweeted
 
-#### The app is deployed at [The FoodTruck SF](https://thefoodtrucksf.herokuapp.com).
+#### The app is deployed at [The FoodTruck SF](https://favoritetrucksf.herokuapp.com/).
