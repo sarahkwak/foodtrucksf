@@ -13,6 +13,9 @@ The original capp idea is from Uber's Coding Challenge list: https://github.com/
 5. The list is showing all the foodtrucks in the SF area. It does not sync with the map search result.
 6. The list is paginated by 15 search result in the page
 ![Alt FoodTruckSF Screenshot](https://github.com/sarahkwak/foodtrucksf/blob/master/app/assets/images/foodtrucksf.png)
+7. Once user is login with facebook, user is able to save foodtrucks as favorite and unfavorite.
+8. Current_user is also able to leave reviews.
+9. All users are able to see the existing reviews.
 
 ## Future Wishlist
 * Each list has a link to 'yelp' so user can review the ratings
