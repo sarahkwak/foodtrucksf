@@ -30,16 +30,30 @@
     <div class=food-truck>
       <h1>The List of All Food Trucks in SF</h1>
       <% @foods_page.each do |food| %>
-        <h3><%= food.name %></h3>
+        <h3 class='truck-name'><%= food.name %></h3>
         <% if current_user %>
           <% if Favorite.where(food_id: food.id, user_id: current_user.id).count > 0 %>
-            <%= button_to 'Unfavorite', "/foods/#{food.id}/favorite", :method => :delete %>
+            <%= button_to 'Unfavorite', "/foods/#{food.id}/favorite", :method => :delete, :style=> "margin-left: 20px" %>
           <% else %>
-            <%= button_to 'Favorite', "/foods/#{food.id}/favorite" %>
+            <%= button_to 'Favorite', "/foods/#{food.id}/favorite", :style=> "margin-left: 20px" %>
           <% end %>
         <% end %>
-        <p><%= food.fooditems%><p>
-      <%end%>
+        <p><%= food.fooditems %><p>
+          <% if Review.where(food_id: food.id).count > 0 %>
+            <% reviews = Review.where(food_id: food.id) %>
+            <% reviews.each do |review| %>
+             <p><%= "🍭" * review.rating %> |
+             <%= review.comment %><p>
+            <% end %>
+          <% end %>
+        <% if current_user %>
+          <%= form_for @review, url: reviews_path(food, current_user) do |f| %>
+            <p>Rating: <%= f.text_field :rating %>
+            Comment: <%= f.text_field :comment %>
+            <%= f.submit "Review" %></p>
+          <% end %>
+        <% end %>
+      <% end %>
       <div class=pagination>
         <%= will_paginate @foods_page %>
       </div>
