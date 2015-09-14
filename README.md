@@ -1,9 +1,9 @@
-# Food Truck SF
-### Food Truck SF is a service that tells the user what type of food trucks might be found near a specific location on a map.
+# Favorite Truck SF
+### Favorite Truck SF is a service that tells the user what type of food trucks might be found near a specific location on a map.
 
 The data is available on [DataSF:Food Trucks](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat?)
 
-The original capp idea is from Uber's Coding Challenge list: https://github.com/uber/coding-challenge-tools/blob/master/coding_challenge.md
+The original app idea is from Uber's Coding Challenge list: https://github.com/uber/coding-challenge-tools/blob/master/coding_challenge.md
 
 ## Outline
 1. Currently, all food trucks are seeded in the database. The datas are collected and sorted in the seed file.
@@ -18,7 +18,7 @@ The original capp idea is from Uber's Coding Challenge list: https://github.com/
 9. All users are able to see the existing reviews.
 
 ## Future Wishlist
-* Each list has a link to 'yelp' so user can review the ratings
+* Each list has a link to 'yelp' so user can review the ratings - This is impossible! Not many foodtrucks have yelp page so it is impossible to provide consistent level of info for the each truck.
 * The list will only show the narrowed result once the user put an address
 * Re-size the map so it doesn't break the flow of the page
 * The InfoWindow on the map has a link to 'yelp' so user can click within the map and get the information about the truck
