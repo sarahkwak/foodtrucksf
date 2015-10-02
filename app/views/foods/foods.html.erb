@@ -17,11 +17,12 @@
     <div class=hero></div>
 
     <div id="panel">
-        <h1>FIND FOOD TRUCKS NEAR YOU</br>
-        <h1>ANYWHERE IN SAN FRANCISCO</h1>
+        <h1>find food trucks either by <span>location</span> or <span>food type</span></h1>
       <div class='form-input'>
-        <input id="address" type="textbox" value="PostCode or Address">
-        <input id="submit" type="button" value="Search NearBy">
+        <input id="food-type" type="textbox">
+        <input id="food-submit" type="button" value="Search by Food Type"> 
+        <input id="address" type="textbox" >
+        <input id="submit" type="button" value="Search by Location">
       </div>
     </div>
 
@@ -30,7 +31,7 @@
     <div class=food-truck>
       <h1>The List of All Food Trucks in SF</h1>
       <% @foods_page.each do |food| %>
-        <h3 class='truck-name'><%= food.name %></h3>
+        <h3 class='truck-name' ><%= link_to "#{food.name}", food_search_path(food) %></h3>
         <% if current_user %>
           <% if Favorite.where(food_id: food.id, user_id: current_user.id).count > 0 %>
             <%= button_to 'Unfavorite', "/foods/#{food.id}/favorite", :method => :delete, :style=> "margin-left: 20px" %>

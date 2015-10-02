@@ -24,3 +24,13 @@ response = HTTParty.get('https://data.sfgov.org/resource/rqzj-sfat?status=approv
     food = Food.create(name: name, longitude: longitude, latitude: latitude, fooditems: fooditems)
     food.save!
   end
+  class Food
+    def self.dedupe
+      grouped = all.group_by {|food| [food.name] }
+      grouped.values.each do |uniq|
+        first_one = uniq.shift
+        uniq.each{ |double| double.destroy } 
+      end 
+    end 
+  end 
+  Food.dedupe

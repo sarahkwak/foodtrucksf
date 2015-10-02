@@ -1,0 +1,25 @@
+<div class='detailed'>
+  <div class ='detailed_top'>
+    <h1><%= @response['result']['name']%></h1>
+  </div>
+  <p>Address: <%= @response['result']['formatted_address']%></p>
+  <p>Phone: <%= @response['result']['formatted_phone_number']%></p>
+  <h2>Business Hours</h2>
+  <% if @response['result']['opening_hours'] %>
+    <% for i in 0..@response['result']['opening_hours']['weekday_text'].length-1 %>
+      <p><%= @response['result']['opening_hours']['weekday_text'][i]%></p>
+    <%end%>
+  <% else %>
+  <img src='http://jaymitlo.com/wp-content/uploads/2015/02/Bart-Simpson-sorry-1.gif'>
+    <p>There is no business hours in google </p>
+  <% end %>
+  <h2>Google Reviews</h2>
+  <% if @response['result']['reviews'] %>
+    <% for i in 0..@response['result']['reviews'].length-1 %>
+      <p><em>Rating</em> <%= '🍰' * @response['result']['reviews'][i]['aspects'][0]['rating'].to_i %></p>
+      <p><em>Review</em> <%= @response['result']['reviews'][i]['text']%></p>
+    <% end %>
+    <h3>Total User Rating <%= "⭐" * @response['result']['user_ratings_total'].to_i %></h3>
+  <% end %>
+  <p>Google Plus Page: <a href=<%=@response['result']['url'] %>><%=@response['result']['name']%></a></p>
+</div>
