@@ -134,12 +134,14 @@ footer p{
   color: green;
 }
 .detailed {
-  /*background-color: #EBFFF5;*/
   margin-top: -30px;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 .detailed h1 {
   font-family: pacifico;
-  text-align: center;
+  text-align: right;
+  margin-right: 10%;
   padding-top: 100px;
   font-size: 4em;
   color: purple;
