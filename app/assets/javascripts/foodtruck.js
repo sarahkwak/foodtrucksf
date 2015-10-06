@@ -20,6 +20,7 @@ function initMap() {
       map: map,
       position: center,
       title: foodtruck[i]['name'],
+      fooditems: foodtruck[i]['fooditems'],
       icon: {
         url: 'http://maps.gstatic.com/mapfiles/circle.png',
         anchor: new google.maps.Point(10, 10),
@@ -31,7 +32,7 @@ function initMap() {
     // infoWindows.push(infoWindow)
 
   google.maps.event.addListener(marker,'click', function() {
-    var contentString = this.title
+    var contentString = '<div class=specific_food><p>'+this.title+'</p><p>'+this.fooditems+'</p></div>'
     var infoWindow = new google.maps.InfoWindow({
         content: contentString
     });
@@ -95,7 +96,7 @@ $(document).ready(function() {
       } else {
         alert("Sorry, couldn't find the foodtruck serving "+food_type+"!")
       }
-    }
+    }  
     for (var i =0; i<specific_food.length; i++) {
       var center = { lat: parseFloat(specific_food[i]['latitude']),
                       lng: parseFloat(specific_food[i]['longitude']) }
@@ -104,6 +105,7 @@ $(document).ready(function() {
         map: map,
         position: center,
         title: specific_food[i]['name'],
+        fooditems: specific_food[i]['fooditems'],
         icon: {
           url: 'http://maps.gstatic.com/mapfiles/circle.png',
           anchor: new google.maps.Point(10, 10),
@@ -111,8 +113,10 @@ $(document).ready(function() {
         } //icon
       }); //marker
       markers.push(marker)
+
       google.maps.event.addListener(marker,'click', function() {
-      var contentString = this.title
+        // debugger;
+      var contentString = '<div class=specific_food><p>'+this.title+'</p><p>'+this.fooditems+'</p></div>' 
       var infoWindow = new google.maps.InfoWindow({
           content: contentString
       });
