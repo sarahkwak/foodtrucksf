@@ -107,7 +107,7 @@ $(document).ready(function() {
         title: specific_food[i]['name'],
         fooditems: specific_food[i]['fooditems'],
         icon: {
-          url: 'http://maps.gstatic.com/mapfiles/circle.png',
+          url: 'https://maps.gstatic.com/mapfiles/circle.png',
           anchor: new google.maps.Point(10, 10),
           scaledSize: new google.maps.Size(10, 17)
         } //icon
