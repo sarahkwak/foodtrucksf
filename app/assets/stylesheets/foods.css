@@ -39,6 +39,12 @@ body {
   text-align: center;
   color:#CFCFD8;
 }
+#food-type:focus, #address:focus {
+  color: black;
+}
+#address:focus {
+  color: black;
+}
 #submit, #food-submit {
   background-color: #DFAEFF;
   line-height: 1.4;

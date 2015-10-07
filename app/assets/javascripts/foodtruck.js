@@ -86,21 +86,20 @@ $(document).ready(function() {
   }); //click
   $('#food-submit').click(function(evt) {
     evt.preventDefault();
+    initMap();
     deleteMarkers();
     var foodtruck = gon.food_truck
     var food_type = document.getElementById('food-type').value;
-    var specific_food = []
+    var specific_food = [];
     for (var i = 0; i < foodtruck.length; i++) {
       if (foodtruck[i].fooditems.toLowerCase().includes(food_type.toLowerCase())) {
         specific_food.push(foodtruck[i])
-      } else {
-        alert("Sorry, couldn't find the foodtruck serving "+food_type+"!")
       }
     }  
     for (var i =0; i<specific_food.length; i++) {
       var center = { lat: parseFloat(specific_food[i]['latitude']),
                       lng: parseFloat(specific_food[i]['longitude']) }
-      var markers = []
+      var markers = [];
       var marker = new google.maps.Marker({
         map: map,
         position: center,
