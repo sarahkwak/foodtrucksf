@@ -18,7 +18,7 @@ The original app idea is from Uber's Coding Challenge list: https://github.com/u
 9. All users are able to see the existing reviews.
 
 ## Future Wishlist
-* Each list has a link to 'yelp' so user can review the ratings - This is impossible! Not many foodtrucks have yelp page so it is impossible to provide consistent level of info for the each truck.
+* Each list has a link to 'yelp' so user can review the ratings - This is impossible! Not many foodtrucks have yelp page so it is impossible to provide consistent level of info for the each truck. 
 * The list will only show the narrowed result once the user put an address
 * Re-size the map so it doesn't break the flow of the page
 * The InfoWindow on the map has a link to 'yelp' so user can click within the map and get the information about the truck

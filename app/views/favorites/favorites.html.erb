@@ -1,0 +1,16 @@
+<div class='favorite-hero'></div>
+<h1 class='favorite_head'><%= current_user.name %>'s Favorite Food Truck List</h1>
+<div class='favorites'>
+  <% if current_user and @favorites.length > 0 %>
+    <% i = 1 %>
+    <% @favorites.each do |favorite| %>
+    <% food = Food.find(favorite.food_id) %>
+      <h2><%= i %>. <%= food.name %></h2>
+      <p><%= food.fooditems %></p>
+      <% i += 1 %>
+    <% end %>
+  <% else %>
+    <h2>You don't have any favorite trucks in SF? Go back and pick some! </h2>
+  <% end %>
+  <%= link_to 'Go Back', root_path, class: 'back_link' %>
+</div>

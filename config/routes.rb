@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 # Favorites
-  get '/favorites' => 'favorites#index'
+  get '/favorites' => 'favorites#index', as: 'favorites'
   post '/foods/:id/favorite' => 'favorites#create'
-  delete '/foods/:id/favorite' => 'favorites#delete'
+  delete '/foods/:id/favorite' => 'favorites#delete', as: 'delete_favorite'
 # Reviews
   post '/foods/:id/reviews/:user_id' => 'reviews#create', as: 'reviews'
   get '/food_search' => 'foods#search', as: 'food_search'

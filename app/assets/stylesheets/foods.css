@@ -22,7 +22,6 @@ body {
   padding-right: 20px;
   padding-top: 10px;
   text-align: right;
-
 }
 
 #panel {
@@ -130,7 +129,7 @@ input:focus {
 footer {
   height: 100px;
 }
-footer p{
+footer p {
   text-align: right;
   font-size: 1.2em;
   margin-right: 20px;
@@ -170,4 +169,27 @@ footer p{
 .nobusiness {
   position: absolute;
   margin: 20% 20%;
+}
+.favorite-hero {
+  height: 500px;
+  background-size: 100%;
+  background-image: url('https://images.unsplash.com/photo-1426869884541-df7117556757?q=80&fm=jpg&s=a96e2a65771dd939883420703a0bb928');
+}
+.favorite_head {
+  font-size: 4em;
+  font-family: pacifico;
+  text-align: center;
+  color: purple;
+}
+.favorites {
+  margin-left: 20%;
+}
+.back_link {
+  margin-left: 70%;
+  font-size: 2em;
+  text-decoration: none;
+  padding-bottom: 60px;
+}
+.back_link:hover {
+  color: #B280B2;
 }
